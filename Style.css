@@ -1,10 +1,16 @@
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color:#f4f4f4; 	/* light gray */
-	 overflow-y: hidden; 
+	
 }
+
+@media only screen and (min-width: 1024px) {
+
+
 #home {
     display: block;
 }
@@ -230,68 +236,72 @@ nav a {
 #content-container > section:target {
     display: block;
 }
-
-@media screen and (max-width: 1200px) {
-    #profile-section {
-        left: 5%; 
-    }
-
-    nav {
-        width: 80%;
-    }
-
-    #content-container {
-        width: 80%;
-        margin-left: 20%; 
-    }
 }
-@media screen and (max-width: 992px) {
+
+@media only screen and (max-width: 768px) {
+    /* Body adjustments */
+ #home {
+    display: block;
+}
+
+    #fixed-top {
+        padding: 10px 0;  /* Adding a bit of padding on the top and bottom */
+    }
+    
+    #cover-photo {
+        height: 200px; /* Reduced height for mobile */
+        margin-top: 0; /* Remove negative margin */
+    }
+    
     #profile-section {
-        position: static;
+        position: static; /* Remove absolute positioning */
         width: 100%;
         height: auto;
-        margin-bottom: 20px;
+        border: none; /* Removing the border for mobile */
+        margin: 20px 0; /* Give some space on top and bottom */
     }
-
-    #cover-photo {
-        height: 200px;
+    
+    #profile-pic {
+        width: 150px;
+        height: 150px;
+        margin: 10px auto; /* Center it */
     }
-
-    nav, #content-container {
-        width: 90%;
-        margin: 0 auto;
+    
+    nav {
+        width: 100%;
     }
-
-    #content-container {
-        padding-top: 20px; 
-    }
-}
-@media screen and (max-width: 768px) {
+    
     nav ul {
-        flex-direction: column; /* stack menu items */
-        align-items: center;
+        flex-direction: column; /* Stack them vertically */
+        padding: 10px 0;
+    }
+    
+    nav a {
+        padding: 10px 20px; /* Make them larger and more tappable */
+        display: block; /* Stretch to full width of the nav */
+        text-align: center; /* Center the text */
     }
 
-    nav a {
-        font-size: 18px;  
-        padding: 10px 0; 
+    #content {
+        padding-top: 20px; /* Reduced padding for mobile */
+    }
+    
+    #content-container {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 0; /* Reduce padding */
     }
 
     #about, #contact, #skills {
-        padding: 20px 10px;
+        max-width: 100%;
+        padding: 15px;
+        margin: 10px 0; /* Reduced margin for mobile */
     }
-
+    
     #skills li {
-        width: calc(50% - 10px); /* two skill items per row with a little spacing */
-        margin-right: 10px;
-        margin-bottom: 10px;
-    }
-
-    #skills ul {
-        text-align: center; /* center skill items */
-    }
-
-    #skills li:nth-child(2n) {
-        margin-right: 0; /* remove margin-right for every second item */
+        width: 48%; /* Make skill boxes side by side on mobile */
+        text-align: center; /* Center the text */
+        margin: 0.5%; /* Give a small margin to separate them */
     }
 }
