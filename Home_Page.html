@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammara Ameer</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <!-- Fixed Top Section -->
+    <div id="fixed-top">
+        <!-- Cover Photo -->
+        <div id="cover-photo">
+            <!-- You can set the cover photo as a background image using CSS -->
+        </div>
+<!-- Profile Section -->
+<div id="profile-section">
+    <!-- Profile Picture -->
+    <div id="profile-pic">
+        <img src="./images/profile.jpg" alt="Ammara Ameer">
+    </div>
+    
+    <!-- Profile Details -->
+    <div id="profile-details">
+        <h3>Ammara Ameer</h3>
+        <p>Web Developer & Designer</p>
+        <p>Passionate about creating beautiful and efficient web applications. With a strong background in both design and coding, I bring a holistic approach to web development.</p>
+    </div>
+</div>
+
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+   <div id="content">
+    <div id="content-container">
+        <!-- Homepage Section -->
+        <section id="home">
+            <!-- Content here... -->
+        </section>
+
+       <!-- Skills Section -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div >
+        <ul>
+            <li>Proficient in Object-Oriented Programming.</li>
+            <li>Adherence to SOLID Principles.</li>
+            <li>Knowledge of Design Patterns.</li>
+            <li>Expertise in Code Organization and Management.</li>
+            <li>Comprehensive Documentation skills.</li>
+        </ul>
+    </div>
+</section>
+
+
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+               I have been working as Security Researcher for past 2 years. As a Security Researcher I find vulnerabilities in different websites and report them. In University I was the team lead of different projects, I have worked on different languages and made some game and management systems.  
+ 
+My final year project was Aspect Based Sentiment Analysis. It analyzes uncharacterized data and organized them in to a meaningful data such as my data are restaurant reviews it will help Admin to improve their quality in particular category of their restaurant. 
+
+            </p>
+        </section>
+ <section id="contact">
+        <!-- Contact Section -->
+       <h2>Contact Information</h2>
+<div class="contact-info">
+    <p><strong>Name:</strong> Ammara Ameer</p>
+    <p><strong>Email:</strong> <a href="mailto:ameerkhan8903@gmail.com">ameerkhan8903@gmail.com</a></p>
+</div>
+</section>
+    </div>
+</div>
+<script>
+      document.addEventListener("DOMContentLoaded", function() {
+    var navLinks = document.querySelectorAll("nav a");
+
+    for (var i = 0; i < navLinks.length; i++) {
+        navLinks[i].addEventListener("click", function(event) {
+
+            // Hide all sections
+            var sections = document.querySelectorAll("#content-container > section");
+            for (var j = 0; j < sections.length; j++) {
+                sections[j].style.display = "none";
+            }
+
+            // Show the target section
+            var target = this.getAttribute("href");
+            var targetSection = document.querySelector(target);
+            targetSection.style.display = "block";
+
+            // Smooth scroll to the section
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+
+            // Updating the URL fragment manually
+            history.pushState(null, null, target);
+
+        });
+    }
+});
+
+
+    </script>
+</body>
+
+</html>
